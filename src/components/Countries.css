@@ -1,0 +1,6 @@
+.results-div{
+    padding: 60px 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4.5rem;
+}
