@@ -5,15 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class ThemesService {
 
-  theme:string = "light";
+  theme:string = "Light";
   
   changeTheme(){
-    if(this.theme === "light"){
-      this.theme = "dark";
-    }
-    else{
-      this.theme = "light";
-    }
+    this.theme === "Light"? this.theme = "Dark": this.theme = "Light";
 
     document.body.className = this.theme;
   }
