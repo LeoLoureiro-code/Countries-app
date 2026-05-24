@@ -14,8 +14,19 @@ body{
     padding: 0 1.5rem;
 }
 
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 @media (min-width: 760px) {
     body{
         padding: 0 2.5rem;
+    }
+}
+
+@media (min-width: 1280px){
+     body{
+        padding: 0 4rem;
     }
 }
