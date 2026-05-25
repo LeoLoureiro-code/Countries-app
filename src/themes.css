@@ -1,4 +1,4 @@
-.light-theme{
+.Light{
     --color-background: #FCFCFC;
     --color-text: #111517;
     --color-header: #FFFFFF;
@@ -7,7 +7,7 @@
     --color-card-text: #111517;
 }
 
-.dark-theme{
+.Dark{
     --color-background: #202C36;
     --color-text: #FFFFFF;
     --color-header: #2B3844;
