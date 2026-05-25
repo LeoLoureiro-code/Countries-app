@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CountriesService } from '../../services/countries-service/countries-service';
 
 @Component({
   selector: 'app-countries-home',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './countries-home.css',
 })
 export class CountriesHome {
+
+  countriesService = inject(CountriesService);
 
 }
