@@ -1,11 +1,11 @@
 <div class="country_card">
-    <img src="" alt="" class="country_card_image">
+    <img src="{{country.flags.png}}" alt="{{country.flags.alt}}" class="country_card_image">
     <div class="country_card_info_div">
-        <h2 class="country_card_title"></h2>
+        <h2 class="country_card_title">{{country.name.common}}</h2>
         <div class="country_card_info">
-            <p class="country_card_population"></p>
-            <p class="country_card_region"></p>
-            <p class="country_card_capital"></p>
+            <p class="country_card_population">{{country.population}}</p>
+            <p class="country_card_region">{{country.region}}</p>
+            <p class="country_card_capital">{{country.capital}}</p>
         </div>
     </div>
 </div>
