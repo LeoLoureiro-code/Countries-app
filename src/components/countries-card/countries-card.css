@@ -1,3 +1,22 @@
 .country_card{
     margin-top: 5rem;
 }
+
+.country_card_info_div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.country_card_title{
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    margin: 1rem 0;
+}
+
+.country_card_population, .country_card_region, .country_card_capital{
+    margin: 0.5rem 0;
+}
+
+.country_card_population_span, .country_card_region_span, .country_card_capital_span{
+    font-weight: 700;
+}
