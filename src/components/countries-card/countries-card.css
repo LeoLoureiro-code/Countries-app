@@ -5,6 +5,11 @@
     color: var(--color-card-text);
 }
 
+a{
+    text-decoration: none;
+    color: var(--color-card-text)
+}
+
 .country_card_image{
     width: 16.5rem;
     height: 10rem;
