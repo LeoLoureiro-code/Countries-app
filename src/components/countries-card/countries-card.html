@@ -1,20 +1,22 @@
 <div class="country_card">
-    <img src="{{country.flags.png}}" alt="{{country.flags.alt}}" class="country_card_image">
-    <div class="country_card_info_div">
-        <div class="country_card_info">
-            <h2 class="country_card_title">{{country.name.common}}</h2>
-            <p class="country_card_population">
-                <span class="country_card_population_span">Population: </span>  
-                {{country.population.toLocaleString()}}
-            </p>
-            <p class="country_card_region">
-                <span class="country_card_region_span">Region: </span> 
-                {{country.region}}
-            </p>
-            <p class="country_card_capital">
-                <span class="country_card_capital_span">Capital: </span>
-                {{country.capital}}
-            </p>
+    <a [routerLink]="['/details', country.name.common]">
+        <img src="{{country.flags.png}}" alt="{{country.flags.alt}}" class="country_card_image">
+        <div class="country_card_info_div">
+            <div class="country_card_info">
+                <h2 class="country_card_title">{{country.name.common}}</h2>
+                <p class="country_card_population">
+                    <span class="country_card_population_span">Population: </span>  
+                    {{country.population.toLocaleString()}}
+                </p>
+                <p class="country_card_region">
+                    <span class="country_card_region_span">Region: </span> 
+                    {{country.region}}
+                </p>
+                <p class="country_card_capital">
+                    <span class="country_card_capital_span">Capital: </span>
+                    {{country.capital}}
+                </p>
+            </div>
         </div>
-    </div>
+    </a>
 </div>
