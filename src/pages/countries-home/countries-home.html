@@ -1,7 +1,11 @@
-<!-- @for(country of countriesService.countries(); track country.name.common){
-    
-} -->
-
-<div class="countries_div">
-    
+<div class="search_div">
+    <app-countries-form></app-countries-form>
+    <app-countries-filter></app-countries-filter>
 </div>
+<div class="countries_div">
+    @for(country of countries; track country){
+        <app-countries-card 
+        [country]="country">
+        </app-countries-card>
+    }
+</div> 

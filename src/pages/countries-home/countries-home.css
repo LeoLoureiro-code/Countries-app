@@ -6,12 +6,24 @@
     align-items: center;
 }
 
+.search_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 @media (min-width: 764px){
     .countries_div{
         margin-top: 5rem;
         display: grid;
         grid-template-columns: repeat(2, 16.5rem);
         gap: 5rem;
+    }
+
+        .search_div{
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
     }
 }
 
