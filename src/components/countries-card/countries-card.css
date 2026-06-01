@@ -3,6 +3,8 @@
     max-width: 16.5rem;
     background-color: var(--color-card);
     color: var(--color-card-text);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 a{
