@@ -1,0 +1,41 @@
+
+.not_found_container{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('/assets/images/planet-earth-background.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    padding: 0 1.5rem;
+}
+
+a{
+    font-size: 1.5rem;
+    text-decoration: underline;
+    margin-top: 3rem;
+    color: #ffffff;
+}
+
+.not_found_div{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.not_found_title{
+    color: #ffffff;
+    font-size:clamp(2rem, 4vw, 5rem);
+    text-shadow: 10px 5px 20px  rgb(0, 0, 0);
+    margin-bottom: 3rem;
+}
+
+.not_found_paragraph{
+    color: #ffffff;
+    text-shadow: 5px 5px 20px  rgb(0, 0, 0);
+    font-size:clamp(1rem, 3vw, 2rem);
+    text-align: center;
+}
