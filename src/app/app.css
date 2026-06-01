@@ -1,0 +1,14 @@
+.search_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+@media (min-width: 760px) {
+   
+    .search_div{
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+}
