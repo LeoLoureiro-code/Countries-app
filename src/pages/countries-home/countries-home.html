@@ -3,7 +3,7 @@
     <app-countries-filter></app-countries-filter>
 </div>
 <div class="countries_div">
-    @for(country of countries; track country){
+    @for(country of countries; track country.cca3){
         <app-countries-card 
         [country]="country">
         </app-countries-card>
