@@ -1,10 +1,12 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CountriesCard } from '../../components/countries-card/countries-card';
 import { CountriesService } from '../../services/countries-service/countries-service';
+import { CountriesFilter } from '../../shared/countries-filter/countries-filter';
+import { CountriesForm } from '../../shared/countries-form/countries-form';
 
 @Component({
   selector: 'app-countries-home',
-  imports: [CountriesCard],
+  imports: [CountriesCard, CountriesFilter, CountriesForm],
   templateUrl: './countries-home.html',
   styleUrl: './countries-home.css',
 })
