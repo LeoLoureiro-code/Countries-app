@@ -3,4 +3,6 @@
     width: 12.5rem;
     height: 3rem;
     padding: 0.5rem 1rem;
+    outline: none;
+    border-radius: 5%;
 }

@@ -4,6 +4,7 @@ header{
     align-items: center;
     justify-content: space-between;
     margin-top: 1rem;
+    padding: 0 1.5rem;
 }
 
 .logo{
@@ -21,4 +22,16 @@ header{
 .themes_img{
     height: 1rem;
     width: 1rem;
+}
+
+@media (min-width: 760px) {
+    header{
+        padding: 0 2.5rem;
+    }
+}
+
+@media (min-width: 1280px){
+     header{
+        padding: 0 4rem;
+    }
 }

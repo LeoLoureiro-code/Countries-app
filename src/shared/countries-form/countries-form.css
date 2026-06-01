@@ -5,4 +5,7 @@
 .countries_form_input{
     padding: 0.5rem 1rem;
     border: none;
+    border-radius: 10px;
+    background-color: var(--color-input);
+    min-width: 20rem;
 }
