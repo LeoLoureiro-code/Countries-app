@@ -1,21 +1,21 @@
 <!-- Make the html and add info -->
 @if(country){
 <div class="country_details_container">
-    <a routerLink="/home" class="country_details_anchor">Back</a>
+    <a routerLink="/home" class="country_details_anchor"><span class="country_details_anchor_span">&larr;</span>Back</a>
     <div class="country_details_info_div">
         <img src={{country.flags.svg}} alt={{country.flags.alt}} class="country_details_img">
         <div class="country_details_info_primary">
             <h1 class="country_details_title">{{country.name.common}}</h1>
-            <p class="country_details_native_name">{{country.name.official}}</p>
-            <p class="country_details_population">{{country.population.toLocaleString()}}</p>
-            <p class="country_details_region">{{country.region}}</p>
-            <p class="country_details_sub_region">{{country.subregion}}</p>
-            <p class="country_details_capital">{{country.capital[0]}}</p>
+            <p class="country_details_native_name"><span class="country_details_native_name_span">Native Name: </span>{{country.name.official}}</p>
+            <p class="country_details_population"><span class="country_details_population_span">Population: </span>{{country.population.toLocaleString()}}</p>
+            <p class="country_details_region"><span class="country_details_region_span">Region: </span>{{country.region}}</p>
+            <p class="country_details_sub_region"><span class="country_details_sub_region_span">Sub Region: </span>{{country.subregion}}</p>
+            <p class="country_details_capital"><span class="country_details_capital_span">Capital: </span>{{country.capital[0]}}</p>
         </div>
         <div class="country_details_info_secondary">
-            <p class="country_details_domain">{{country.tld[0]}}</p>
-            <!-- <p class="country_details_currencies">{{country.currencies}} fix this</p> -->
-            <p class="country_details_languages">{{country.languages.spa}}</p>
+            <p class="country_details_domain"><span class="country_details_domain_span">Top Level Domain: </span>{{country.tld[0]}}</p>
+            <p class="country_details_currencies"><span class="country_details_currencies_span">Currencies: </span>{{getCurrencyName() }}</p>
+            <p class="country_details_languages"><span class="country_details_languages_span">Languages: </span>{{country.languages.spa}}</p>
         </div>
     </div>
     <div class="country_details_border_div">
