@@ -17,14 +17,14 @@
             <p class="country_details_currencies"><span class="country_details_currencies_span">Currencies: </span>{{getCurrencyName() }}</p>
             <p class="country_details_languages"><span class="country_details_languages_span">Languages: </span>{{country.languages.spa}}</p>
         </div>
-    <div class="country_details_border_div">
-        <h2 class="country_details_border_title">Country Borders: </h2>
-        <ul class="country_details_border_list">
-            @for(border of country.borders; track $index){
-            <li class="country_details_border_item">{{border}}</li>
-            }
-        </ul>
-    </div>
+        <div class="country_details_border_div">
+            <h2 class="country_details_border_title">Country Borders: </h2>
+            <ul class="country_details_border_list">
+                @for(border of country.borders; track $index){
+                <li class="country_details_border_item">{{border}}</li>
+                }
+            </ul>
+        </div>
 </div>
 </div>
 }
