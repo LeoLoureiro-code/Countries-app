@@ -1,59 +1,92 @@
-# CountriesApp
+# Countries Information App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+A responsive countries information application built with Angular. This project consumes data from the REST Countries API and demonstrates concepts such as API integration, component communication, routing, theme management, and centralized state handling through Angular services.
 
-## Development server
+Users can search for countries by name or filter them by region, view detailed information about each country, and switch between light and dark themes.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## Overview
+
+### The Challenge
+
+Users should be able to:
+
+* Search for countries using the search input field
+* Filter countries by region
+* View detailed information about a selected country
+* Switch between light and dark themes
+* Experience a responsive layout optimized for different screen sizes
+* See hover and focus states for interactive elements
+
+---
+
+### Screenshot
+
+![App Screenshot](./screenshots/screenshot.png)
+
+---
+
+### Links
+
+* **Solution URL:** https://github.com/LeoLoureiro-code/Countries-app
+* **Live Site URL:** https://leoloureiro-code.github.io/Countries-app
+
+---
+
+## My Process
+
+### Built With
+
+* Semantic HTML5
+* CSS Custom Properties
+* Flexbox & CSS Grid
+* Angular 20
+* Angular Standalone Components
+* Angular Routing
+* Angular Services
+* Angular HttpClient
+* REST Countries API
+* Responsive Design Principles
+
+---
+
+## What I Learned
+
+This project helped reinforce several important frontend development concepts using Angular:
+
+* Managing and sharing state between components using Angular services
+* Communicating between parent and child components using `@Input` and `@Output` decorators
+
+```typescript
+@Output()
+regionSelected = new EventEmitter<string>();
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+* Implementing theme switching across multiple pages through a shared service
 
-## Code scaffolding
+```typescript
+changeTheme() {
+  this.theme === 'Light'
+    ? this.theme = 'Dark'
+    : this.theme = 'Light';
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+  document.body.className = this.theme;
+}
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* Consuming external APIs using Angular's `HttpClient`
+* Working with dynamic routes to display country details pages
+* Applying filtering and search functionality while maintaining a clean user experience
 
-```bash
-ng generate --help
-```
+---
 
-## Building
+## Continued Development
 
-To build the project run:
+In future iterations of this project, I would like to:
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+* Add unit tests for components and services
+* Improve type safety by replacing `any` types with TypeScript interfaces
+* Implement caching strategies to avoid unnecessary API requests
+* Enhance accessibility following WCAG guidelines
+* Explore more advanced state management solutions for larger applications
