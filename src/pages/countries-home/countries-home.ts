@@ -6,24 +6,65 @@ import { CountriesForm } from '../../shared/countries-form/countries-form';
 
 @Component({
   selector: 'app-countries-home',
-  imports: [CountriesCard, CountriesFilter, CountriesForm],
+  standalone: true,
+  imports: [
+    CountriesCard,
+    CountriesFilter,
+    CountriesForm
+  ],
   templateUrl: './countries-home.html',
   styleUrl: './countries-home.css',
 })
-export class CountriesHome implements OnInit{
+export class CountriesHome implements OnInit {
 
-  constructor(private countriesService:CountriesService){}
+  selectedRegion = '';
+  searchTerm = '';
 
-  countries:any = [];
- 
+  constructor(private countriesService: CountriesService) { }
 
-  ngOnInit() {
-     this.countriesService.loadCountries().subscribe(
-        data =>{
-            this.countries =  data;
-        }
-     );
-  }
-  
+  allCountries: any[] = [];
+  countries: any[] = [];
 
+ngOnInit() {
+  this.countriesService.loadCountries().subscribe(data => {
+    this.allCountries = data;
+    this.countries = data;
+
+  });
+}
+
+onSearchCountry(searchTerm: string) {
+
+
+  this.searchTerm = searchTerm;
+
+  this.applyFilters();
+}
+
+onRegionChange(region: string) {
+
+  this.selectedRegion = region;
+
+  this.applyFilters();
+}
+
+applyFilters() {
+
+
+  this.countries = this.allCountries.filter(country => {
+
+    const matchesRegion =
+      !this.selectedRegion ||
+      country.region === this.selectedRegion;
+
+    const matchesSearch =
+      !this.searchTerm ||
+      country.name.common
+        .toLowerCase()
+        .includes(this.searchTerm.toLowerCase());
+
+    return matchesRegion && matchesSearch;
+  });
+
+}
 }

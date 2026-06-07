@@ -1,11 +1,13 @@
 <div class="search_div">
-    <app-countries-form></app-countries-form>
-    <app-countries-filter></app-countries-filter>
+    <app-countries-form (searchChanged)="onSearchCountry($event)">
+    </app-countries-form>
+
+    <app-countries-filter (regionSelected)="onRegionChange($event)">
+    </app-countries-filter>
 </div>
 <div class="countries_div">
     @for(country of countries; track country.cca3){
-        <app-countries-card 
-        [country]="country">
-        </app-countries-card>
+    <app-countries-card [country]="country">
+    </app-countries-card>
     }
-</div> 
+</div>
