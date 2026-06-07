@@ -23,8 +23,9 @@ Users should be able to:
 
 ### Screenshot
 
-![App Screenshot](./screenshots/screenshot.png)
-
+![App Screenshot](./assets/screenshots/Screenchot1.png)
+![App Screenshot](./assets/screenshots/Screenchot2.png)
+![App Screenshot](./assets/screenshots/Screenchot3.png)
 ---
 
 ### Links
